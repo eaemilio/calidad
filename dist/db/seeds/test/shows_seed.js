@@ -1,3 +1,5 @@
+'use strict';
+
 exports.seed = function (knex, Promise) {
   return knex('shows').del() // Deletes ALL existing entries
   .then(function () {

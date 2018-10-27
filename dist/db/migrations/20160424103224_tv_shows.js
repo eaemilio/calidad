@@ -1,3 +1,5 @@
+'use strict';
+
 exports.up = function (knex, Promise) {
   return knex.schema.createTable('shows', function (table) {
     table.increments();
