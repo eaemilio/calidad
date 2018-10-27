@@ -1,0 +1,45 @@
+{
+  "name": "shinka-vidapharm-be",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "prestartdebug": "npm run build",
+    "startdebug": "cross-env NODE_ENV=development cross-env DEBUG=knex:query node dist/bin/www",
+    "prestart": "npm run build",
+    "start": "cross-env NODE_ENV=development node dist/bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.3.5",
+    "cors": "^2.8.4",
+    "debug": "~2.2.0",
+    "express": "^4.16.3",
+    "jade": "~1.11.0",
+    "knex": "^0.15.2",
+    "lodash": "^4.17.11",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.0.0",
+    "cross-env": "^5.2.0",
+    "gulp": "^3.9.1",
+    "gulp-delete-lines": "0.0.7",
+    "gulp-file": "^0.4.0",
+    "gulp-footer": "^2.0.1",
+    "gulp-header": "^2.0.5",
+    "gulp-param": "^1.0.3",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2"
+  }
+}
