@@ -5,3 +5,4 @@ before_install:
   - npm i -g npm@4.6.1
 script:
   - npm test
+  - npm start
