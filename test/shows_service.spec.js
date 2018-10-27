@@ -110,4 +110,4 @@ describe("query tests", () => {
         });
     });
 
-})
+});
