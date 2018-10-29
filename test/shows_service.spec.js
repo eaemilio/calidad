@@ -43,19 +43,6 @@ describe("query tests", () => {
         });
     });
 
-    describe("Data service", async () => {
-        it("Get all data should return an array", async () => {
-            let shows = await getAll();
-            shows.should.be.a("array");
-            shows.length.should.equal(4);
-        });
-
-        it("Array of all data should return 4 elements ", async () => {
-            let shows = await getAll();
-            shows.length.should.equal(4);
-        });
-    });
-
     describe("Show Methods", async() => {
         it("Get Shows should be a function", async () => {
             expect(typeof getAll).to.equal('function');
